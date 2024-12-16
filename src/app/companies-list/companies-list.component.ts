@@ -69,6 +69,7 @@ export class CompaniesListComponent implements OnInit {
   displayedColumns: string[] = [
     'col-name',
     'col-industry',
+    'col-action',
   ];
 
   constructor(private companiesService: CompanyService) {}

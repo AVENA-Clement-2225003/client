@@ -24,6 +24,13 @@ import { CommonModule } from '@angular/common';
             <option value="employee">Employee</option>
           </select>
         </div>
+        <div>
+          <label for="searchMode">Mode:</label>
+          <select [(ngModel)]="searchMode" name="searchMode" required>
+            <option value="asc">Asc</option>
+            <option value="desc">Desc</option>
+          </select>
+        </div>
         <button type="submit">Search</button>
       </form>
 
@@ -43,6 +50,7 @@ import { CommonModule } from '@angular/common';
 export class SearchComponent {
   searchTerm: string = '';
   searchType: string = '';
+  searchMode: string = '';
   searched: boolean = false;
   results: any[] = [];
   searchOptions: string[] = ['company', 'employee'];
@@ -51,7 +59,7 @@ export class SearchComponent {
 
   onSearch() {
     this.searched = true;
-    this.performSearch(this.searchTerm, this.searchType).subscribe(
+    this.performSearch(this.searchTerm, this.searchType, this.searchMode).subscribe(
       data => {
         this.results = data;
       },
@@ -62,8 +70,8 @@ export class SearchComponent {
     );
   }
 
-  performSearch(term: string, type: string): Observable<any[]> {
-    const url = `http://localhost:5200/search?keyword=${term}&type=${type}`;
+  performSearch(term: string, type: string, mode: string): Observable<any[]> {
+    const url = `http://localhost:5200/search?keyword=${term}&type=${type}&mode=${mode}`;
     return this.httpClient.get<any[]>(url).pipe(
       map(response => {
         // Assuming the API returns the data directly, otherwise map the necessary properties

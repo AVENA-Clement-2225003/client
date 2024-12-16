@@ -48,7 +48,7 @@ export class EditCompanyComponent implements OnInit {
       .updateCompany(this.company()._id || '', company)
       .subscribe({
         next: () => {
-          this.router.navigate(['/']);
+          this.router.navigate(['/companies']);
         },
         error: (error) => {
           alert('Failed to update company');
