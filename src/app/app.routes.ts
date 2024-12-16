@@ -5,8 +5,10 @@ import { EditEmployeeComponent } from './edit-employee/edit-employee.component';
 import { CompaniesListComponent } from './companies-list/companies-list.component';
 import { AddCompanyComponent } from './add-company/add-company.component';
 import { EditCompanyComponent } from './edit-company/edit-company.component';
+import { SearchComponent } from './search/search.component';
 
 export const routes: Routes = [
+  { path: 'search', component: SearchComponent },
   {
     path: 'employees',
     children: [

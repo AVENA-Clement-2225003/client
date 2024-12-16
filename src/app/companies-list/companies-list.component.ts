@@ -68,9 +68,7 @@ export class CompaniesListComponent implements OnInit {
   companies$ = {} as WritableSignal<Company[]>;
   displayedColumns: string[] = [
     'col-name',
-    'col-position',
-    'col-level',
-    'col-action',
+    'col-industry',
   ];
 
   constructor(private companiesService: CompanyService) {}
