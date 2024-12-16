@@ -19,6 +19,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   template: `
     <mat-toolbar>
       <span>Employees Management System</span>
+      <nav>
+      <ul>
+        <li><a href="/companies">Companies</a></li>
+        <li><a href="/employees">Employees</a></li>
+        <li><a href="/search">Search</a></li>
+      </ul>
+    </nav>
     </mat-toolbar>
     <main>
       <router-outlet />
