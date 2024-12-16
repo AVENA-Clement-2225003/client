@@ -32,7 +32,7 @@ export class AddEmployeeComponent {
   addEmployee(employee: Employee) {
     this.employeeService.createEmployee(employee).subscribe({
       next: () => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/employee']);
       },
       error: (error) => {
         alert('Failed to create employee');

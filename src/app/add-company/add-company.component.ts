@@ -32,7 +32,7 @@ export class AddCompanyComponent {
   addCompany(company: Company) {
     this.companyService.createCompany(company).subscribe({
       next: () => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/company']);
       },
       error: (error) => {
         alert('Failed to create company');
