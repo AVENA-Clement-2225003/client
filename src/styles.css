@@ -2,3 +2,88 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-mdc-card > * > p {
+    color: white;
+}
+
+.searchForm {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+select {
+    background: none;
+    color: grey;
+    border: 3px grey solid;
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-left: 10px;
+    
+}
+
+li > a {
+    color: white;
+}
+
+li > a:visited {
+    color: white;
+}
+
+.searchForm > * {
+    margin-right: 10px;
+}
+
+.searchBar {
+    border-radius: 15px;
+    padding: 5px 2px 5px 15px;
+    border: 3px grey solid;
+    display: flex;
+}
+
+.searchBar > button[type=submit] {
+    background: none;
+    display: flex;
+    border: none;
+}
+
+.searchInput {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.resultDisplayer {
+    display: flex;
+    flex-direction: column;
+}
+
+.result {
+    display: flex;
+    border: 3px black solid;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.resultInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.resultInfo > p{
+    margin: 0;
+}

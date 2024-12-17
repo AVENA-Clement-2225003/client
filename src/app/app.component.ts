@@ -18,7 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   ],
   template: `
     <mat-toolbar>
-      <span>Employees Management System</span>
+      <span>E&CMS</span>
       <nav>
       <ul>
         <li><a href="/companies">Companies</a></li>

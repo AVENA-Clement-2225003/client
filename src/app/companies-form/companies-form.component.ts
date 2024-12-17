@@ -44,7 +44,7 @@ import { Company } from '../company';
         <mat-error>Name must be at least 3 characters long.</mat-error>
         }
       </mat-form-field>
-
+      
       <mat-form-field>
         <mat-label>Industry</mat-label>
         <input
